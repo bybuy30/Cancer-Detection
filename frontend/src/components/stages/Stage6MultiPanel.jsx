@@ -8,10 +8,10 @@ const Stage6MultiPanel = ({ processedImages = [] }) => {
     const [selectedView, setSelectedView] = useState(null);
 
     const panels = [
-        { id: 0, label: 'Axial View', icon: <Layers size={14} />, symbol: "AX-01" },
-        { id: 1, label: 'Sagittal View', icon: <Scan size={14} />, symbol: "SG-02" },
-        { id: 2, label: 'Coronal View', icon: <Crosshair size={14} />, symbol: "CR-03" },
-        { id: 3, label: '3D Volumetric', icon: <Box size={14} />, symbol: "3D-VX" }
+        { id: 0, label: 'Original Scan', icon: <Layers size={14} />, symbol: "AX-01" },
+        { id: 1, label: 'segmentation mask', icon: <Scan size={14} />, symbol: "SG-02" },
+        { id: 2, label: 'Tumor Overlay', icon: <Crosshair size={14} />, symbol: "CR-03" },
+        { id: 3, label: 'Bounding Box', icon: <Box size={14} />, symbol: "3D-VX" }
     ];
 
     return (

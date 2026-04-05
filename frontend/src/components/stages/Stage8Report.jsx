@@ -13,7 +13,7 @@ const Stage8Report = ({ data, processedImages = [], heatmapUrl = null, onBack })
         return `REP-${Math.random().toString(36).substring(2, 7).toUpperCase()}`;
     }, []);
 
-    const volume = (data.detectedDiameter * 1.4).toFixed(1);
+    const volume = (((4 / 3) * Math.PI * Math.pow(data.detectedDiameter / 2, 3)) / 1000).toFixed(1); // mm -> cm³
 
     // Prevent generation if name is missing
     const canGenerate = patientName.trim().length > 0;
